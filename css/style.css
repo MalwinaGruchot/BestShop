@@ -1,3 +1,57 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif; */
 * {
     box-sizing: border-box;
+}
+
+:root {
+    --color-pink: #FB3B64;
+    --color-blue: #08A6E4;
+    --color-green: #55DFB4;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-shadow: #00000029;
+    --color-light-gray: #707070;
+    --color-gray: #A5A5A5;
+    --font-Open_Sans: 'Open Sans', sans-serif;
+    --font-Raleway: 'Raleway', sans-serif;
+}
+
+html {
+    font-family: var(--font-Open_Sans);
+    color: var(--color-black);
+}
+
+.container {
+    margin: 0 auto;
+    width: 1352px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav {
+    width: 40%;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    font-family: var(--font-Open_Sans);
+    font-weight: bold;
+    color: var(--color-gray);
+}
+
+.logo {
+    color: var(--color-blue);
+    font-family: var(--font-Raleway);
+    font-weight: 300;
+    font-size: 32px;
 }
