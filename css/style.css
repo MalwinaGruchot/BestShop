@@ -148,51 +148,27 @@ html {
 
 .wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.wrap--secendary {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 125px
 }
 
 .statistics__title {
     margin: 100px 0;
 }
 
-.statistics__title--size {
-    font-size: 3.6rem;
-}
-
-.circle--color-pink {
-    background-color: var(--color-pink);
-}
-
-.circle--color-blue {
-    background-color: var(--color-blue)
-}
-
-.circle--color-green {
-    background-color: var(--color-green)
-}
-
-.wrap--secendary {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-
-    width: 20%;
-}
 
 .statistics__number {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
     margin-top: 15px;
 }
 
-.statistics__text--size {
-    font-size: 1.7rem;
-}
-
-.statistics__text--color {
-    color: var(--color-gray);
+.statistics__title--size {
+    font-size: 3.6rem;
 }
 
 .statistics__text {
@@ -209,3 +185,31 @@ html {
     left: 50%;
     transform: translate(-15%, -50%);
 }
+
+.circle--color-pink {
+    background-color: var(--color-pink);
+}
+
+.circle--color-blue {
+    background-color: var(--color-blue)
+}
+
+.circle--color-green {
+    background-color: var(--color-green)
+}
+
+.statistics__number--textAppearance {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.statistics__text--size {
+    font-size: 1.7rem;
+}
+
+.statistics__text--color {
+    color: var(--color-gray);
+}
+
+/* style dla sekcji benefity*/
