@@ -18,6 +18,7 @@ font-family: 'Raleway', sans-serif; */
     --color-gray-border: #E8E9ED;
     --font-Open_Sans: 'Open Sans', sans-serif;
     --font-Raleway: 'Raleway', sans-serif;
+    --color-used: var(--color-blue);
 }
 
 html {
@@ -107,10 +108,13 @@ html {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--color-white);
-    padding: 16px 64px;
+    width: 440px;
+    height: 67px;
+    line-height: 67px;
     border-radius: 50px;
-    background-color: var(--color-blue);
+    background-color: var(--color-used);
     text-decoration: none;
+    text-align: center;
 }
 
 .circle {
@@ -126,9 +130,6 @@ html {
     align-items: center;
 }
 
-.sectionOpen__btn--large {
-    padding: 22px 157px;
-}
 
 .sectionOpen__btn--primary {
     box-shadow: 5px 10px 14px var(--color-shadow-blue);
@@ -149,17 +150,30 @@ html {
 
 /* style dla sekcji statystyk */
 
-.section__wrap {
+.wrap {
     display: flex;
     justify-content: space-evenly;
 }
 
-.section__wrap--secendary {
+.wrap--secendary {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 125px
 }
+
+.wrap--person {
+    --color-used: var(--color-pink);
+}
+
+.wrap--eye {
+    --color-used: var(--color-blue);
+}
+
+.wrap--catalog {
+    --color-used: var(--color-green);
+}
+
 
 .statistics__title {
     margin: 100px 0;
@@ -189,17 +203,10 @@ html {
     transform: translate(-15%, -50%);
 }
 
-.circle--color-pink {
-    background-color: var(--color-pink);
+.circle--color {
+    background-color: var(--color-used);
 }
 
-.circle--color-blue {
-    background-color: var(--color-blue)
-}
-
-.circle--color-green {
-    background-color: var(--color-green)
-}
 
 .statistics__number--textAppearance {
     font-size: 2rem;
@@ -355,4 +362,129 @@ html {
     font-size: 3.6rem;
     text-align: left;
     width: 75%;
+}
+
+/* style dla sekcji cennik*/
+
+.pricing {
+    padding: 100px 0;
+    --color-used: var(--color-pink);
+}
+
+.container__pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing__title {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+
+}
+
+.pricing__singe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 372px;
+    height: 461px;
+    padding: 34px 0 80px;
+    position: relative;
+}
+
+.pricing__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+}
+
+
+.pricing__item::before {
+    content: url("../assets/Ckechmark-1.svg");
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+
+}
+
+.pricing__item--icon::before {
+    content: url("../assets/Close.svg");
+}
+
+.pricing__singe--basic .pricing__price,
+.pricing__text {
+    flex-grow: 1;
+}
+
+.pricing_btn {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    line-height: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.pricing__singe--professional {
+    --color-used: var(--color-blue);
+    width: 405px;
+    height: 500px;
+
+}
+
+.pricing__singe--premium {
+    --color-used: var(--color-green);
+}
+
+.pricing__item--appearance {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.pricing__text--appearance {
+    font-family: var(--font-Raleway);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+.pricing__price--appearance {
+    font-family: var(--font-Open_Sans);
+    font-weight: 300;
+    font-size: 4.6rem;
+    color: var(--color-used);
+    line-height: 2;
+    text-align: center;
+}
+
+.pricing__subtitle--appearance {
+    font-family: var(--font-Raleway);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.pricing__singe--appearance {
+    border: 1px solid var(--color-used);
+    border-radius: 18px;
+
+}
+
+/* wyróżniony element sekcji pricing */
+.pricing__singe--professional {
+    box-shadow: 5px 10px 27px var(--color-shadow-blue);
+}
+
+.pricing__singe--professional .pricing__subtitle--appearance {
+    font-size: 2.1rem
 }
