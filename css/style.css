@@ -65,22 +65,20 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.header_link--is-open:hover {
-    color: var(--color-black);
-    border-bottom: 2px solid var(--color-blue);
-}
-
-
-.link {
     text-decoration: none;
     font-family: var(--font-Open_Sans);
     font-weight: bold;
     font-size: 1.1rem;
     color: var(--color-gray);
     padding: 0 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
+
+.header_link:hover {
+    color: var(--color-black);
+    border-bottom: 2px solid var(--color-blue);
+}
+
 
 .logo {
     padding: 16px 0;
@@ -124,53 +122,54 @@ html {
 }
 
 /* style dla sekcji otwierającej */
-.sectionOpen {
+.opening {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-.sectionOpen__btn--primary {
+.btn--secendary {
     box-shadow: 5px 10px 14px var(--color-shadow-blue);
 }
 
-.sectionOpen__title {
+.opening__title {
     margin: 130px 0 20px 0;
 }
 
-.sectionOpen__text {
+.opening__text {
     margin-bottom: 40px;
 }
 
-.sectionOpen__image {
+.opening__image {
     display: block;
     width: 100%;
 }
 
 /* style dla sekcji statystyk */
 
-.wrap {
+.statistics__container {
     display: flex;
     justify-content: space-evenly;
 }
 
-.wrap--secendary {
+.statistic_single-container {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 125px
 }
 
-.wrap--person {
+.statistic_single-container--person {
     --color-used: var(--color-pink);
 }
 
-.wrap--eye {
+.statistic_single-container--eye {
     --color-used: var(--color-blue);
 }
 
-.wrap--catalog {
+.statistic_single-container--catalog {
     --color-used: var(--color-green);
 }
 
@@ -179,9 +178,11 @@ html {
     margin: 100px 0;
 }
 
-
 .statistics__number {
     margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
 }
 
 .statistics__title--size {
@@ -190,10 +191,13 @@ html {
 
 .statistics__text {
     margin: 20px 0 120px 0;
+    font-size: 1.7rem;
+    color: var(--color-gray);
 }
 
 .statistics__circle {
     position: relative;
+    background-color: var(--color-used);
 }
 
 .statistics__icon {
@@ -203,27 +207,15 @@ html {
     transform: translate(-15%, -50%);
 }
 
-.circle--color {
-    background-color: var(--color-used);
-}
 
-
-.statistics__number--textAppearance {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-}
-
-.statistics__text--size {
-    font-size: 1.7rem;
-}
-
-.statistics__text--color {
-    color: var(--color-gray);
-}
 
 /* style dla sekcji benefity*/
-.benefits .container {
+.benefits {
+    background-color: var(--color-gray-bacground);
+    padding: 105px 0;
+}
+
+.benefits__container {
     display: flex;
     flex-direction: column;
     width: 1125px;
@@ -254,7 +246,6 @@ html {
     border-radius: 5px;
 }
 
-
 .benefits__box {
     align-self: stretch;
     width: 440px;
@@ -269,7 +260,7 @@ html {
     text-align: left;
 }
 
-.benefits__box .benefits__image {
+.benefits__single--trumpet .benefits__image {
     width: 295px;
     position: relative;
     top: 50%;
@@ -285,6 +276,12 @@ html {
     height: 4px;
     background-color: var(--color-benefits-single);
     margin-top: 50px;
+}
+
+.benefits__single--apearance {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-border);
+    border-radius: 5px;
 }
 
 .benefits__square,
@@ -315,10 +312,7 @@ html {
     height: 320px;
     border-radius: 50%;
     background-color: var(--color-benefits-single);
-
-
 }
-
 
 .benefits__single--notebook {
     --color-benefits-single: var(--color-pink);
@@ -334,22 +328,9 @@ html {
     --color-benefits-single: var(--color-green);
 }
 
-.benefits--appearance {
-    background-color: var(--color-gray-bacground);
-    padding: 105px 0;
-
-}
-
-.benefits__single--apearance {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray-border);
-    border-radius: 5px;
-}
-
 .benefits__single--row-revers {
     flex-direction: row-reverse;
 }
-
 
 .benefits__image {
     display: block;
@@ -358,7 +339,7 @@ html {
     z-index: 2;
 }
 
-.benefits__title--size {
+.benefits__title {
     font-size: 3.6rem;
     text-align: left;
     width: 75%;
@@ -393,6 +374,10 @@ html {
     height: 461px;
     padding: 34px 0 80px;
     position: relative;
+    border: 1px solid var(--color-used);
+    border-radius: 18px;
+
+
 }
 
 .pricing__list {
@@ -417,8 +402,15 @@ html {
     content: url("../assets/Close.svg");
 }
 
-.pricing__singe--basic .pricing__price,
+.pricing__singe--basic .pricing__price {
+    flex-grow: 1;
+}
+
 .pricing__text {
+    font-family: var(--font-Raleway);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
     flex-grow: 1;
 }
 
@@ -445,20 +437,14 @@ html {
     --color-used: var(--color-green);
 }
 
-.pricing__item--appearance {
+.pricing__item {
     font-weight: 400;
     font-size: 1.4rem;
 }
 
-.pricing__text--appearance {
-    font-family: var(--font-Raleway);
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-align: center;
 
-}
 
-.pricing__price--appearance {
+.pricing__price {
     font-family: var(--font-Open_Sans);
     font-weight: 300;
     font-size: 4.6rem;
@@ -467,25 +453,21 @@ html {
     text-align: center;
 }
 
-.pricing__subtitle--appearance {
+.pricing__subtitle {
     font-family: var(--font-Raleway);
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
 }
 
-.pricing__singe--appearance {
-    border: 1px solid var(--color-used);
-    border-radius: 18px;
 
-}
 
 /* wyróżniony element sekcji pricing */
 .pricing__singe--professional {
     box-shadow: 5px 10px 27px var(--color-shadow-blue);
 }
 
-.pricing__singe--professional .pricing__subtitle--appearance {
+.pricing__singe--professional .pricing__subtitle {
     font-size: 2.1rem
 }
 
@@ -613,12 +595,12 @@ html {
     box-shadow: 0px -5px 40px var(--color-shadow-black);
 }
 
-.footer__logo--appearance {
+.footer__logo {
     font-size: 2.6rem;
     line-height: 3rem;
 }
 
-.footer__text--appearance {
+.footer__text {
     font-size: 1.1;
     color: var(--color-gray);
     line-height: 1.5rem;
