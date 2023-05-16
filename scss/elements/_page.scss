@@ -1,3 +1,6 @@
+// @import "../settings/mixins";
+
+
 html {
     font-size: 10px;
     color: $color-text;
@@ -6,6 +9,23 @@ html {
 
 .container {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 1.5rem;
     margin: 0 auto;
+
+
+
+    @include media(large) {
+        max-width: 1352px;
+
+    }
+}
+
+.logo {
+    color: $color-logo;
+    font-family: $font-Raleway;
+    font-weight: 300;
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
 }
