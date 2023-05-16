@@ -1,0 +1,22 @@
+@use "sass:map";
+
+$breakpoints: (
+    small: 'min-width: 460px',
+    medium:'min-width: 1024px',
+    large: 'min-width: 1200px'
+);
+
+// definicja mixina do zapytań o media
+@mixin media($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+
+    @if ($size) {
+        @media (#{$size}) {
+            @content;
+        }
+    }
+
+    @else {
+        // @error '"#{$breakpoint}" - błąd, nie wiem co to';
+    }
+}
