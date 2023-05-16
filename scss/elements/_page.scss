@@ -9,14 +9,13 @@ html {
 
 .container {
     width: 100%;
-    padding: 0 1.5rem;
     margin: 0 auto;
-
+    padding: 0 1.5rem;
 
 
     @include media(large) {
         max-width: 1352px;
-
+        margin: 0 auto;
     }
 }
 
@@ -29,3 +28,33 @@ html {
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
 }
+
+.title {
+    font-family: $font-Raleway;
+    font-weight: 400;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.text {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-text-btn;
+    line-height: 2.2rem;
+    border-radius: 5rem;
+    background-color: $color-used;
+    text-decoration: none;
+    text-align: center;
+    padding: 2.2rem 0;
+}
+
+// .circle {
+//     width: 6.2rem;
+//     height: 6.2rem;
+//     border-radius: 50%;
+// }
