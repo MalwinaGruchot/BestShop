@@ -1,0 +1,42 @@
+.opening {
+    &__container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    &__title {
+        padding: 17rem 0 2.8rem 0;
+        text-align: center;
+
+    }
+
+    &__text {
+        padding: 0 2rem 2.8rem;
+        text-align: center;
+        line-height: 2.2rem;
+    }
+
+    .btn--secendary {
+        box-shadow: 5px 10px 14px $color-shadow-blue;
+        margin-bottom: 5.1rem;
+    }
+
+    &__image {
+        width: 100%;
+        flex-grow: 1;
+        background-image: url("/assets/Background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 250%;
+
+        @include media(small) {
+            background-size: 230%;
+        }
+
+        @include media(medium) {}
+    }
+
+
+}
