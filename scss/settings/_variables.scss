@@ -1,0 +1,17 @@
+@use "sass:list";
+@use "sass:map";
+
+$color-elements-list: #08A6E4, #FB3B64, #55DFB4;
+$color-used: list.nth($color-elements-list, 1);
+
+$color-text: #000000;
+$color-text-btn: #ffffff;
+$color-text-gray: #A5A5A5;
+$color-text-form: #707070;
+
+$color-background-elements: #ffffff;
+$color-bacground-section: #F7F7F7;
+
+$color-shadow-black: #00000029;
+$color-shadow-blue: #07ACE629;
+$color-border-gray: #E8E9ED;
