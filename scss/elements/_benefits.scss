@@ -1,0 +1,111 @@
+@use "sass:list";
+
+.benefits {
+    background-color: $color-bacground-section;
+    padding: 4rem 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        width: 90vw;
+        padding: 0;
+
+        @include media(large) {
+            width: 1125px;
+        }
+    }
+
+    &__single {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5rem;
+        background-color: $color-background-elements;
+        border: 0.1rem solid $color-border-gray;
+        border-radius: 0.5rem;
+        position: relative;
+
+    }
+
+    &__square {
+        width: 192px;
+        margin-top: 3rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2rem;
+            right: 0;
+            rotate: 45deg;
+            background-color: list.nth($color-elements-list, 2);
+            width: 10rem;
+            height: 10rem;
+            border-radius: 41px;
+        }
+    }
+
+    &__cirkle {
+        width: 192px;
+        margin-top: 3rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -9px;
+            left: -16px;
+
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            background-color: list.nth($color-elements-list, 1);
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+
+    &__description {
+        gap: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 0.5rem;
+        padding: 2.5rem 2rem;
+    }
+
+    &__text {
+        margin-top: 2rem;
+        text-align: left;
+    }
+
+
+    &__title {
+        font-size: 3rem;
+        text-align: left;
+        // width: 75%;
+    }
+
+    &__box {
+        order: -1;
+        background-color: list.nth($color-elements-list, 3);
+        position: relative;
+        padding-top: 50px;
+
+    }
+
+
+
+}
