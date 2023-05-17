@@ -1,9 +1,11 @@
 .opening {
     &__container {
-        height: 100vh;
+        height: calc(100vh - 70px);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
     }
 
     &__title {
@@ -21,21 +23,30 @@
     .btn--secendary {
         box-shadow: 5px 10px 14px $color-shadow-blue;
         margin-bottom: 5.1rem;
+        align-self: stretch;
+
+        @include media(small) {
+            align-self: center;
+            padding-left: 15rem;
+            padding-right: 15rem;
+        }
     }
 
     &__image {
-        width: 100%;
-        flex-grow: 1;
-        background-image: url("/assets/Background.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 250%;
+        display: block;
+        width: 230%;
+
+        height: auto;
 
         @include media(small) {
-            background-size: 230%;
+            width: 150%;
+
         }
 
-        @include media(medium) {}
+        @include media(medium) {
+            width: 100%;
+            transform: none;
+        }
     }
 
 
