@@ -28,6 +28,22 @@
         border-radius: 0.5rem;
         position: relative;
 
+        @include media(large) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &--notebook {
+            @include media(large) {
+                padding-right: 11.7rem;
+            }
+        }
+
+        &--pfone {
+            @include media(large) {
+                padding-left: 7rem;
+            }
+        }
     }
 
     &__square {
@@ -66,6 +82,10 @@
             border-radius: 50%;
             background-color: list.nth($color-elements-list, 1);
         }
+
+        @include media(large) {
+            order: -1;
+        }
     }
 
     &__image {
@@ -84,18 +104,53 @@
         align-items: flex-start;
         border-radius: 0.5rem;
         padding: 2.5rem 2rem;
+
+        @include media(large) {
+            align-self: stretch;
+            padding: 0 3.5rem;
+            width: 41.5rem;
+        }
+
+        &--size {
+            @include media(large) {
+                border-radius: 0.5rem;
+                width: 62.3rem;
+            }
+        }
     }
 
     &__text {
         margin-top: 2rem;
         text-align: left;
+
+        @include media(left) {
+            margin-top: 3rem;
+        }
+
+        &:after {
+            @include media(large) {
+                content: "";
+                display: block;
+                width: 32.7rem;
+                height: 4px;
+                background-color: $color-used;
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+            }
+        }
     }
 
 
     &__title {
         font-size: 3rem;
         text-align: left;
+
         // width: 75%;
+        @include media(large) {
+            padding-top: 5rem;
+            font-size: 3.6rem;
+            width: 75%;
+        }
     }
 
     &__box {
@@ -103,6 +158,14 @@
         background-color: list.nth($color-elements-list, 3);
         position: relative;
         padding-top: 50px;
+
+        // @include media(large) {
+        //     align-self: stretch;
+        //     width: 44rem;
+        //     order: 0;
+        //     border-radius: 0.5rem;
+        //     position: relative;
+        // }
 
     }
 
