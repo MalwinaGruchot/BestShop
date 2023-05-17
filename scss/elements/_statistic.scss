@@ -1,0 +1,88 @@
+@use "sass:list";
+
+.statistics {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+
+        @include media(medium) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+        padding: 0 4.5rem;
+
+        @include media(small) {
+            padding: 0px 0 10rem 0;
+        }
+
+        &--size {
+            font-size: 3rem;
+        }
+    }
+
+    &__number {
+        // margin-top: 1.3rem;
+        font-size: 2rem;
+        font-weight: 800;
+        text-align: center;
+        letter-spacing: 0.5rem;
+    }
+
+    &__text {
+        // margin: 2rem 0 2rem 0;
+        font-size: 1.7rem;
+        color: $color-text-gray;
+
+        @include media(small) {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-15%, -50%);
+
+
+    }
+}
+
+.statistic_single-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 125px;
+    gap: 1rem;
+
+
+}
+
+
+.circle {
+    position: relative;
+    width: 6.2rem;
+    height: 6.2rem;
+    border-radius: 50%;
+
+
+    &--person {
+        background-color: list.nth($color-elements-list, 2);
+    }
+
+    &--eye {
+        background-color: list.nth($color-elements-list, 1);
+    }
+
+    &--catalog {
+        background-color: list.nth($color-elements-list, 3);
+    }
+}
