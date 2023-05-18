@@ -81,6 +81,10 @@
         margin-top: 3rem;
         position: relative;
 
+        @include media(large) {
+            width: 42rem;
+        }
+
         &::after {
             content: "";
             display: block;
@@ -92,6 +96,13 @@
             height: 15rem;
             border-radius: 50%;
             background-color: list.nth($color-elements-list, 1);
+
+            @include media(large) {
+                width: 32rem;
+                height: 32rem;
+                left: -20px;
+                top: -12px;
+            }
         }
 
         @include media(large) {
@@ -144,9 +155,17 @@
                 display: block;
                 width: 32.7rem;
                 height: 4px;
-                background-color: $color-used;
+                background-color: list.nth($color-elements-list, 1);
                 margin-top: 5rem;
                 margin-bottom: 5rem;
+
+                .benefits__single--notebook & {
+                    background-color: list.nth($color-elements-list, 2);
+                }
+
+                .benefits__description--size & {
+                    background-color: list.nth($color-elements-list, 3);
+                }
             }
         }
     }
@@ -158,7 +177,7 @@
 
         // width: 75%;
         @include media(large) {
-            padding-top: 5rem;
+            padding-top: 8rem;
             font-size: 3.6rem;
             width: 75%;
         }
