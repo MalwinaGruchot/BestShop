@@ -31,6 +31,12 @@
         @include media(large) {
             flex-direction: row;
             justify-content: space-between;
+
+            &--trumpet {
+                border: none;
+                background-color: transparent;
+                gap: 5rem
+            }
         }
 
         &--notebook {
@@ -130,13 +136,16 @@
         @include media(large) {
             align-self: stretch;
             padding: 0 3.5rem;
-            width: 41.5rem;
+            width: 56.5rem;
         }
 
         &--size {
             @include media(large) {
                 border-radius: 0.5rem;
                 width: 62.3rem;
+                background-color: $color-background-elements;
+                border: 0.1rem solid $color-border-gray;
+
             }
         }
     }
@@ -184,7 +193,7 @@
     }
 
     &__box {
-        order: -1;
+        order: 1;
         background-color: list.nth($color-elements-list, 3);
         position: relative;
         padding-top: 50px;
