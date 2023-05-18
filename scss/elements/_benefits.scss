@@ -51,6 +51,10 @@
         margin-top: 3rem;
         position: relative;
 
+        @include media(large) {
+            width: 386px;
+        }
+
         &::after {
             content: "";
             display: block;
@@ -62,6 +66,13 @@
             width: 10rem;
             height: 10rem;
             border-radius: 41px;
+
+            @include media(large) {
+                width: 18rem;
+                height: 18rem;
+                top: -40px;
+            }
+
         }
     }
 
