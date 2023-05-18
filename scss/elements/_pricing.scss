@@ -1,0 +1,172 @@
+@use "sass:list";
+
+.container__pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem; ///dla malych ekranow
+
+    @include media(large) {
+        justify-content: space-between;
+    }
+}
+
+.pricing {
+    padding: 5.3rem 0;
+
+    @include media(large) {
+        padding: 10rem 0;
+    }
+
+    // --color-used: list.nth($color-elements-list, 2);
+
+
+
+    &__title {
+        flex-basis: 100%;
+
+        @include media(large) {
+            margin-bottom: 5rems;
+        }
+    }
+
+    &__singe {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 29.2rem;
+        height: 30rem;
+        position: relative;
+        border: 1px solid list.nth($color-elements-list, 1);
+        border-radius: 1.8rem;
+        gap: 1rem;
+        padding: 0 2rem;
+
+        @include media(large) {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 37.2rem;
+            height: 46.1rem;
+            padding: 3.4rem 0 8rem;
+
+        }
+
+        &--basic {
+            border-color: list.nth($color-elements-list, 2);
+            ;
+        }
+
+        &--premium {
+            border-color: list.nth($color-elements-list, 3);
+            ;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 70%;
+
+        @include media(large) {
+            align-items: center;
+            height: 40%;
+        }
+    }
+
+    &__item::before {
+        content: url("../assets/Ckechmark-1.svg");
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        margin-right: 10px;
+    }
+
+    &__item--icon::before {
+        content: url("../assets/Close.svg");
+    }
+
+    &__singe--basic .pricing__price {
+        flex-grow: 1;
+    }
+
+    &__text {
+        font-family: $font-Raleway;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    &_btn {
+        // width: 150px;
+        // height: 50px;
+        padding: 1rem 5.7rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        line-height: 50px;
+        font-size: 1.3rem;
+        font-weight: bold;
+
+        .pricing__singe--premium & {
+            background-color: list.nth($color-elements-list, 3);
+        }
+
+        .pricing__singe--basic & {
+            background-color: list.nth($color-elements-list, 2);
+        }
+    }
+
+    &__singe--professional {
+        width: 34rem;
+        height: 30rem;
+        box-shadow: $color-shadow-blue 5px 10px 27px;
+
+        @include media(large) {
+            width: 40.5rem;
+            height: 50rem;
+        }
+
+    }
+
+
+    &__item {
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
+
+    &__price {
+        font-family: $font-Open_Sans;
+        font-weight: 300;
+        font-size: 4.6rem;
+        color: list.nth($color-elements-list, 1);
+        line-height: 2;
+        text-align: center;
+
+        .pricing__singe--basic & {
+            color: list.nth($color-elements-list, 2);
+        }
+
+        .pricing__singe--premium & {
+            color: list.nth($color-elements-list, 3);
+        }
+    }
+
+    &__subtitle {
+        font-family: $font-Raleway;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &__description {
+        width: 40%;
+    }
+
+}
