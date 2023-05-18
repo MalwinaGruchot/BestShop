@@ -71,15 +71,20 @@
 
         @include media(medium) {
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 2px solid transparent;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            text-align: center;
+            line-height: 7rem;
+            width: 8.3rem;
+            border-bottom: 3px solid transparent;
+
+            &:hover {
+                color: $color-text;
+                border-bottom: 3px solid $color-used;
+            }
         }
 
-        &:hover {
-            color: $color-text;
-            border-bottom: 2px solid $color-used;
-        }
+
     }
 }
