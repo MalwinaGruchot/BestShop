@@ -193,18 +193,15 @@
     }
 
     &__box {
-        order: 1;
+        order: -1;
         background-color: list.nth($color-elements-list, 3);
         position: relative;
         padding-top: 50px;
 
-        // @include media(large) {
-        //     align-self: stretch;
-        //     width: 44rem;
-        //     order: 0;
-        //     border-radius: 0.5rem;
-        //     position: relative;
-        // }
+        @include media(large) {
+            order: 1;
+
+        }
 
     }
 
