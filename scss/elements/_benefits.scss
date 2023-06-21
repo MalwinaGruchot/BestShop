@@ -28,7 +28,7 @@
         border-radius: 0.5rem;
         position: relative;
 
-        @include media(large) {
+        @include media(medium) {
             flex-direction: row;
             justify-content: space-between;
 
@@ -40,13 +40,13 @@
         }
 
         &--notebook {
-            @include media(large) {
+            @include media(medium) {
                 padding-right: 11.7rem;
             }
         }
 
         &--pfone {
-            @include media(large) {
+            @include media(medium) {
                 padding-left: 7rem;
             }
         }
@@ -57,7 +57,7 @@
         margin-top: 3rem;
         position: relative;
 
-        @include media(large) {
+        @include media(medium) {
             width: 386px;
         }
 
@@ -73,7 +73,7 @@
             height: 10rem;
             border-radius: 41px;
 
-            @include media(large) {
+            @include media(medium) {
                 width: 18rem;
                 height: 18rem;
                 top: -40px;
@@ -87,7 +87,7 @@
         margin-top: 3rem;
         position: relative;
 
-        @include media(large) {
+        @include media(medium) {
             width: 42rem;
         }
 
@@ -111,7 +111,7 @@
             }
         }
 
-        @include media(large) {
+        @include media(medium) {
             order: -1;
         }
     }
@@ -133,14 +133,14 @@
         border-radius: 0.5rem;
         padding: 2.5rem 2rem;
 
-        @include media(large) {
+        @include media(medium) {
             align-self: stretch;
             padding: 0 3.5rem;
             width: 56.5rem;
         }
 
         &--size {
-            @include media(large) {
+            @include media(medium) {
                 border-radius: 0.5rem;
                 width: 62.3rem;
                 background-color: $color-background-elements;
@@ -154,12 +154,12 @@
         margin-top: 2rem;
         text-align: left;
 
-        @include media(left) {
+        @include media(medium) {
             margin-top: 3rem;
         }
 
         &:after {
-            @include media(large) {
+            @include media(medium) {
                 content: "";
                 display: block;
                 width: 32.7rem;
@@ -185,7 +185,7 @@
         text-align: left;
 
         // width: 75%;
-        @include media(large) {
+        @include media(medium) {
             padding-top: 8rem;
             font-size: 3.6rem;
             width: 75%;
@@ -196,11 +196,13 @@
         order: -1;
         background-color: list.nth($color-elements-list, 3);
         position: relative;
-        padding-top: 50px;
+        padding-top: 5rem;
+        align-self: stretch;
 
-        @include media(large) {
+        @include media(medium) {
             order: 1;
 
+            padding-top: 6rem;
         }
 
     }
