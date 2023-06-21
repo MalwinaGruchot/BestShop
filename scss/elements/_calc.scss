@@ -1,0 +1,108 @@
+@use "sass:list";
+
+.calc {
+    background-color: $color-bacground-section;
+    padding: 8.7rem 0;
+
+    &__container {
+        width: 865px;
+        display: flex;
+        justify-content: center;
+        gap: 4.7rem;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 5.7rem;
+    }
+
+    &__column {
+        width: 38rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: relative;
+    }
+
+    &__input {
+        display: block;
+        outline: none;
+        border: 1px solid $color-border-blue;
+        box-shadow: 0px 3px 6px $color-shadow-light-blue;
+        height: 4rem;
+        border-radius: 0.6rem;
+        color: $color-text;
+        font-size: 1.3rem;
+        padding-left: 2rem;
+
+
+        &::placeholder {
+            color: $color-text-gray;
+        }
+    }
+
+    &__checkbox {
+        line-height: 2.4rem;
+        margin-bottom: 0;
+        color: $color-text-form;
+    }
+
+    &__list {
+        border: 1px solid list.nth($color-elements-list, 2);
+        border-radius: 0.6rem;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-color: $color-background-elements ;
+        box-shadow: 0px 3px 6px $color-shadow-pink;
+        display: none;
+    }
+
+    &__item {
+        font-size: 1.3rem;
+        padding: 0.5rem 2rem;
+
+        &:hover {
+            background-color: $color-shadow-pink;
+        }
+    }
+
+    &__element {
+        height: 3.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: list.nth($color-elements-list, 3);
+        box-shadow: 0px 3px 6px $color-shadow-black;
+        color: $color-text-item;
+        font-size: 1.4rem;
+        padding: 0 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__price {
+        font-size: 1.8rem;
+    }
+
+    &__priceTotal {
+        align-self: flex-end;
+        background-color: $color-used;
+        padding: 1rem 2rem;
+        color: $color-text-item;
+        font-size: 1.4rem;
+        border-radius: 0.6rem;
+
+        &--bold {
+            padding-left: 5rem;
+            font-size: 2rem;
+
+        }
+    }
+}
+
+.active {
+    display: block;
+}
