@@ -1,19 +1,24 @@
 @use "sass:list";
 @use "sass:map";
 
-$color-elements-list: #08A6E4, #FB3B64, #55DFB4;
+$color-elements-list: #08a6e4, #fb3b64, #55dfb4;
 $color-used: list.nth($color-elements-list, 1);
 
-$color-logo: #08A6E4;
+$color-logo: #08a6e4;
 
 $color-text: #000000;
 $color-text-btn: #ffffff;
-$color-text-gray: #A5A5A5;
+$color-text-item: #ffffff;
+$color-text-gray: #a5a5a5;
 $color-text-form: #707070;
 
 $color-background-elements: #ffffff;
-$color-bacground-section: #F7F7F7;
+$color-bacground-section: #f7f7f7;
 
 $color-shadow-black: #00000029;
-$color-shadow-blue: #07ACE629;
-$color-border-gray: #E8E9ED;
+$color-shadow-blue: #07ace629;
+$color-shadow-light-blue: #08a6e429;
+$color-shadow-pink: #EB476E29;
+
+$color-border-gray: #e8e9ed;
+$color-border-blue: #08a6e4;
