@@ -176,6 +176,45 @@
             </div>
         </section>
 
+        <section class="calc ">
+
+            <h2 class="title calc__title">Calculate how much you'll pay</h2>
+            <div class="container calc__container">
+                <div class="calc__column">
+
+                    <input type="number" class="calc__input" id="quantity" placeholder="Products quantity">
+                    <input type="number" class="calc__input" id="orders" placeholder="Estimated orders in month">
+                    <input type="text" class="calc__input" id="package" placeholder="Estimated orders in month">
+                    <ul class="calc__list ">
+                        <li class="calc__item" data-value="Basic">Basic</li>
+                        <li class="calc__item" data-value="Professional">Professional</li>
+                        <li class="calc__item" data-value="Premium">Premium</li>
+                    </ul>
+                    <label for="accounting" class="checkbox calc__checkbox">
+                        <input type="checkbox" name="accounting" id="accounting" class="checkbox__input">
+                        <span class="checkbox__span"></span>Accounting
+                    </label>
+                    <label for="terminal" class="checkbox calc__checkbox">
+                        <input type="checkbox" name="terminal" id="terminal" class="checkbox__input">
+                        <span class="checkbox__span"></span>Rental of a payment terminal
+                    </label>
+
+                </div>
+                <div class="calc__column">
+                    <div class="calc__wrap">
+                        <div class="calc__element">
+                            <p class="calc__description">Products</p>
+                            <p class="calc__calculation">20 * $0.5</p>
+                            <p class="calc__price">$10</p>
+                        </div>
+                        
+                    </div>
+                    <div class="calc__priceTotal">Total:<span class="calc__priceTotal--bold">$117.5</span></div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="contact container">
             <div class="contact_column">
                 <h2 class="title contact__title">Any questions?</h2>
@@ -198,7 +237,7 @@
                         <input class="contact__input" type="email" name="" id="email">
                     </label>
                     <label for="checkbox" class="checkbox">
-                        <input type="checkbox" name="" id="checkbox" class="checkbox__input">
+                        <input type="checkbox" name="agreement" id="checkbox" class="checkbox__input">
                         <span class="checkbox__span"></span>I hereby give consent for my personal data included in my
                         application to be processed
                         for the purposes of the recruitment process under the European Parliament's and Council of the
@@ -225,6 +264,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
