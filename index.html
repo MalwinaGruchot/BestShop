@@ -179,39 +179,57 @@
         <section class="calc ">
 
             <h2 class="title calc__title">Calculate how much you'll pay</h2>
-            <div class="container calc__container">
+            <form novalidate class="container calc__form">
                 <div class="calc__column">
 
-                    <input type="number" class="calc__input" id="quantity" placeholder="Products quantity">
-                    <input type="number" class="calc__input" id="orders" placeholder="Estimated orders in month">
-                    <input type="text" class="calc__input" id="package" placeholder="Estimated orders in month">
-                    <ul class="calc__list ">
-                        <li class="calc__item" data-value="Basic">Basic</li>
-                        <li class="calc__item" data-value="Professional">Professional</li>
-                        <li class="calc__item" data-value="Premium">Premium</li>
+                    <input type="number" class="calc__input" id="products" placeholder="Products quantity" data-price="0.5">
+                    <input type="number" class="calc__input" id="orders" placeholder="Estimated orders in month" data-price="0.25">
+                    <input type="text" class="calc__input" placeholder="Choose package" readonly data-price="60">
+                    <ul class="calc__list" id="package">
+                        <li class="calc__item" id="Basic">Basic</li>
+                        <li class="calc__item" id="Professional">Professional</li>
+                        <li class="calc__item" id="Premium">Premium</li>
                     </ul>
                     <label for="accounting" class="checkbox calc__checkbox">
-                        <input type="checkbox" name="accounting" id="accounting" class="checkbox__input">
+                        <input type="checkbox" name="accounting" id="accounting" class="calc__input checkbox__input" data-price="35">
                         <span class="checkbox__span"></span>Accounting
                     </label>
                     <label for="terminal" class="checkbox calc__checkbox">
-                        <input type="checkbox" name="terminal" id="terminal" class="checkbox__input">
+                        <input type="checkbox" name="terminal" id="terminal" class="calc__input checkbox__input" data-price="5">
                         <span class="checkbox__span"></span>Rental of a payment terminal
                     </label>
 
                 </div>
                 <div class="calc__column">
                     <div class="calc__wrap">
-                        <div class="calc__element">
+                        <div class="calc__element products">
                             <p class="calc__description">Products</p>
-                            <p class="calc__calculation">20 * $0.5</p>
-                            <p class="calc__price">$10</p>
+                            <p class="calc__calculation"></p>
+                            <p class="calc__price"></p>
+                        </div>
+                        <div class="calc__element orders" >
+                            <p class="calc__description">Orders</p>
+                            <p class="calc__calculation"></p>
+                            <p class="calc__price"></p>
+                        </div>
+                        <div class="calc__element package">
+                            <p class="calc__description">Package</p>
+                            <p class="calc__package"></p>
+                            <p class="calc__price"></p>
+                        </div>
+                        <div class="calc__element accounting">
+                            <p class="calc__description">Accounting</p>
+                            <p class="calc__price"></p>
+                        </div>
+                        <div class="calc__element terminal">
+                            <p class="calc__description">Terminal</p>
+                            <p class="calc__price"></p>
                         </div>
                         
                     </div>
                     <div class="calc__priceTotal">Total:<span class="calc__priceTotal--bold">$117.5</span></div>
                 </div>
-            </div>
+            </form>
         </section>
 
 

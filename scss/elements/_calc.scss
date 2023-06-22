@@ -4,7 +4,7 @@
     background-color: $color-bacground-section;
     padding: 8.7rem 0;
 
-    &__container {
+    &__form {
         width: 865px;
         display: flex;
         justify-content: center;
@@ -81,6 +81,16 @@
         font-size: 1.4rem;
         padding: 0 2rem;
         margin-bottom: 1rem;
+        display: none;
+    }
+
+    &__description {
+        width: 30%;
+    }
+
+    &__price {
+        width: 30%;
+        text-align: end;
     }
 
     &__price {
@@ -105,4 +115,8 @@
 
 .active {
     display: block;
+}
+
+.displayFlex {
+    display: flex;
 }
