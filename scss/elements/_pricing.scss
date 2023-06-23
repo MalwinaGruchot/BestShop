@@ -9,6 +9,7 @@
 
     @include media(large) {
         justify-content: space-between;
+        gap: 0;
     }
 }
 
@@ -27,7 +28,7 @@
         flex-basis: 100%;
 
         @include media(large) {
-            margin-bottom: 5rems;
+            margin-bottom: 5rem;
         }
     }
 
@@ -47,7 +48,7 @@
         @include media(large) {
             flex-direction: column;
             justify-content: flex-start;
-            width: 37.2rem;
+            width: 35rem;
             height: 46.1rem;
             padding: 3.4rem 0 8rem;
 
@@ -129,7 +130,7 @@
         box-shadow: $color-shadow-blue 5px 10px 27px;
 
         @include media(large) {
-            width: 40.5rem;
+            width: 37rem;
             height: 50rem;
         }
 
