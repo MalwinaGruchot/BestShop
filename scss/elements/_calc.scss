@@ -5,24 +5,29 @@
     padding: 8.7rem 0;
 
     &__form {
-        width: 865px;
+        max-width: 865px;
         display: flex;
         justify-content: center;
-        gap: 4.7rem;
+        gap: 4.7em;
         flex-wrap: wrap;
     }
 
     &__title {
         width: 100%;
         margin-bottom: 5.7rem;
+
     }
 
     &__column {
-        width: 38rem;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
         position: relative;
+
+        @include media(small) {
+            width: 46%;
+        }
     }
 
     &__input {
@@ -41,6 +46,17 @@
             color: $color-text-gray;
         }
     }
+
+    &__icon {
+        position: absolute;
+        background-image: url(../assets/ArrowDown.svg);
+        width: 2.2rem;
+        height: 2.2rem;
+        top: 128px;
+        right: 14px;
+
+    }
+
 
     &__checkbox {
         line-height: 2.4rem;
@@ -119,4 +135,8 @@
 
 .displayFlex {
     display: flex;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
