@@ -7,6 +7,7 @@ const btnSpan = document.querySelector(".calc__priceTotal--bold");
 let totalPrice = 0;
 const errors = [];
 
+console.log(arrowIcon)
 ////////////////////
 const handleSubmit = function (e) {
     e.preventDefault();
@@ -20,13 +21,16 @@ const addClassActive = function (e) {
     ulChoiceList.classList.toggle("active");
     arrowIcon.classList.toggle("rotate");
 
+    ulChoiceList.addEventListener("click", function (e) {
+        inputList[2].innerText = e.target.id;
+        inputList[2].style.color = "black";
+
+        e.currentTarget.classList.remove("active")
+        arrowIcon.classList.remove("rotate");
+    });
 
 }
-ulChoiceList.addEventListener("click", function (e) {
-    inputList[2].value = e.target.id;
-    e.currentTarget.classList.remove("active")
-    arrowIcon.classList.remove("rotate");
-});
+
 
 inputList[2].addEventListener("click", addClassActive);
 
