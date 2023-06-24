@@ -142,10 +142,11 @@ const handleDisplayFieldSelect = function (e) {
 const inputs = new Input();
 
 
-inputList.forEach(function (input) {
-    input.addEventListener("change", handleDisplayFieldInput)
-})
-// ulChoiceList.addEventListener("click", handleDisplayFieldSelect)
+// inputList.forEach(function (input) {
+//     input.addEventListener("change", handleDisplayFieldInput)
+// })
+
+ulChoiceList.addEventListener("click", handleDisplayFieldSelect)
 // inputList[0].addEventListener("change", handleDisplayFieldInput)
 // inputList[1].addEventListener("change", handleDisplayFieldInput)
 // inputList[3].addEventListener("change", handleDisplayFieldInput)
@@ -154,9 +155,6 @@ inputList.forEach(function (input) {
 const addClassActive = function (e) {
     ulChoiceList.classList.toggle("active");
     arrowIcon.classList.toggle("rotate");
-
-
-
 }
 
 ulChoiceList.addEventListener("click", function (e) {
