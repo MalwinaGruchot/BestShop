@@ -1,9 +1,11 @@
 const form = document.querySelector(".calc__form");
 const inputList = document.querySelectorAll(".calc__input");
 const ulChoiceList = document.querySelector(".calc__list");
+const arrowIcon = document.querySelector(".calc__icon")
 const container = document.querySelector(".calc__wrap");
 const btnSpan = document.querySelector(".calc__priceTotal--bold");
 let totalPrice = 0;
+const errors = [];
 
 ////////////////////
 const handleSubmit = function (e) {
@@ -16,10 +18,12 @@ form.addEventListener("submit", handleSubmit)
 
 const addClassActive = function (e) {
     ulChoiceList.classList.toggle("active");
+    arrowIcon.classList.toggle("rotate");
 
     ulChoiceList.addEventListener("click", function (e) {
         inputList[2].value = e.target.id;
         e.currentTarget.classList.remove("active")
+        arrowIcon.classList.remove("rotate");
     });
 }
 
@@ -39,9 +43,21 @@ Input.prototype.addInput = function (id) {
 }
 
 Input.prototype.getValueInput = function (e) {
-    this[e.target.id]["value"] = (e.target.type === "checkbox") ? 1 * e.target.checked : 1 * e.target.value;
-    this[e.target.id]["price"] = 1 * e.target.getAttribute("data-price")
-    this[e.target.id]["totalPrice"] = this[e.target.id]["value"] * this[e.target.id]["price"];
+    const value = (e.target.type === "checkbox") ? 1 * e.target.checked : 1 * e.target.value;
+    document.querySelectorAll(".error").forEach((error) => error.remove())
+    if ((value >= 0) && (Number.isInteger(value))) {
+        this[e.target.id]["value"] = value;
+        this[e.target.id]["price"] = 1 * e.target.getAttribute("data-price")
+        this[e.target.id]["totalPrice"] = this[e.target.id]["value"] * this[e.target.id]["price"];
+    } else {
+        const p = document.createElement("p")
+        p.innerText = "Value should be greater than 0 and should be an integer"
+        p.classList.add("error");
+        p.style.color = "red"
+        p.style.paddingBottom = "5px"
+        p.style.textContent = "abc"
+        document.querySelector(".calc__column").appendChild(p)
+    }
 };
 
 
@@ -69,19 +85,20 @@ Input.prototype.getValueSelect = function (e) {
 
 }
 
-
 Input.prototype.displayElement = function (e) {
     const div = document.querySelector(`.${e.currentTarget.id}`)
 
     if (this[e.currentTarget.id]["value"]) {
+
         div.classList.add("displayFlex")
         if (div.querySelector(".calc__calculation")) {
             div.querySelector(".calc__calculation").innerText = `${this[e.currentTarget.id]["value"]}*$${this[e.target.id]["price"]}`
-        };
+        }
         if (div.querySelector(".calc__package")) {
             div.querySelector(".calc__package").innerText = this[e.currentTarget.id]["package"];
         }
         div.querySelector(".calc__price").innerText = `$${this[e.currentTarget.id]["totalPrice"]}`;
+
     } else {
         div.classList.remove("displayFlex")
     }
@@ -98,6 +115,7 @@ Input.prototype.getTotalPrice = function () {
     btnSpan.innerText = `$${totalPrice}`
 }
 
+
 const handleDisplayFieldInput = function (e) {
     inputs.addInput(e.target.id)
     inputs.getValueInput(e);
@@ -105,6 +123,7 @@ const handleDisplayFieldInput = function (e) {
     inputs.getTotalPrice();
 
 }
+
 const handleDisplayFieldSelect = function (e) {
     inputs.addInput(e.currentTarget.id)
     inputs.getValueSelect(e);
@@ -115,11 +134,15 @@ const handleDisplayFieldSelect = function (e) {
 }
 
 const inputs = new Input();
-console.log(inputs)
-inputList[0].addEventListener("input", handleDisplayFieldInput)
-inputList[1].addEventListener("input", handleDisplayFieldInput)
+
+
+inputList.forEach(function (input) {
+    input.addEventListener("change", handleDisplayFieldInput)
+})
 ulChoiceList.addEventListener("click", handleDisplayFieldSelect)
-inputList[3].addEventListener("change", handleDisplayFieldInput)
-inputList[4].addEventListener("change", handleDisplayFieldInput)
+// inputList[0].addEventListener("change", handleDisplayFieldInput)
+// inputList[1].addEventListener("change", handleDisplayFieldInput)
+// inputList[3].addEventListener("change", handleDisplayFieldInput)
+// inputList[4].addEventListener("change", handleDisplayFieldInput)
 
 
