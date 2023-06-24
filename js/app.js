@@ -20,12 +20,13 @@ const addClassActive = function (e) {
     ulChoiceList.classList.toggle("active");
     arrowIcon.classList.toggle("rotate");
 
-    ulChoiceList.addEventListener("click", function (e) {
-        inputList[2].value = e.target.id;
-        e.currentTarget.classList.remove("active")
-        arrowIcon.classList.remove("rotate");
-    });
+
 }
+ulChoiceList.addEventListener("click", function (e) {
+    inputList[2].value = e.target.id;
+    e.currentTarget.classList.remove("active")
+    arrowIcon.classList.remove("rotate");
+});
 
 inputList[2].addEventListener("click", addClassActive);
 
