@@ -45,17 +45,29 @@
         &::placeholder {
             color: $color-text-gray;
         }
+
+        &--select {
+            background-color: $color-background-elements;
+            display: flex;
+            align-items: center;
+            color: $color-text-gray;
+            position: relative;
+
+
+        }
+
     }
 
     &__icon {
-        position: absolute;
         background-image: url(../assets/ArrowDown.svg);
         width: 2.2rem;
         height: 2.2rem;
-        top: 128px;
-        right: 14px;
+        position: absolute;
+        top: 12.8rem;
+        right: 2rem;
 
     }
+
 
 
     &__checkbox {
