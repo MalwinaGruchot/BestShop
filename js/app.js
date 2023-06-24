@@ -17,23 +17,23 @@ const handleSubmit = function (e) {
 form.addEventListener("submit", handleSubmit)
 ////////////////////////////////
 
-// const addClassActive = function (e) {
-//     ulChoiceList.classList.toggle("active");
-//     arrowIcon.classList.toggle("rotate");
+const addClassActive = function (e) {
+    ulChoiceList.classList.toggle("active");
+    arrowIcon.classList.toggle("rotate");
 
 
 
-// }
+}
 
-//     ulChoiceList.addEventListener("click", function (e) {
-//         inputList[2].innerText = e.target.id;
-//         inputList[2].style.color = "black";
+ulChoiceList.addEventListener("click", function (e) {
+    inputList[2].innerText = e.target.id;
+    inputList[2].style.color = "black";
 
-//         e.currentTarget.classList.remove("active")
-//         arrowIcon.classList.remove("rotate");
-//     });
+    e.currentTarget.classList.remove("active")
+    arrowIcon.classList.remove("rotate");
+});
 
-// inputList[2].addEventListener("click", addClassActive);
+inputList[2].addEventListener("click", addClassActive);
 
 ////////////////////////////////////////////
 const Input = function () {
@@ -142,9 +142,9 @@ const handleDisplayFieldSelect = function (e) {
 const inputs = new Input();
 
 
-// inputList.forEach(function (input) {
-//     input.addEventListener("change", handleDisplayFieldInput)
-// })
+inputList.forEach(function (input) {
+    input.addEventListener("change", handleDisplayFieldInput)
+})
 
 ulChoiceList.addEventListener("click", handleDisplayFieldSelect)
 // inputList[0].addEventListener("change", handleDisplayFieldInput)
@@ -152,20 +152,7 @@ ulChoiceList.addEventListener("click", handleDisplayFieldSelect)
 // inputList[3].addEventListener("change", handleDisplayFieldInput)
 // inputList[4].addEventListener("change", handleDisplayFieldInput)
 
-const addClassActive = function (e) {
-    ulChoiceList.classList.toggle("active");
-    arrowIcon.classList.toggle("rotate");
-}
 
-ulChoiceList.addEventListener("click", function (e) {
-    inputList[2].innerText = e.target.id;
-    inputList[2].style.color = "black";
-
-    e.currentTarget.classList.remove("active")
-    arrowIcon.classList.remove("rotate");
-});
-
-inputList[2].addEventListener("click", addClassActive);
 
 
 
